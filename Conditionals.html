@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>FindCode - Conditionals and Loops</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">FindCode - Conditionals and loops</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.htm">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Problem solving techniques
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Conditionals.html">Conditional And Loops</a>
+                        <a class="dropdown-item" href="/functions.html">Functions</a>
+                        <a class="dropdown-item" href="/recursions.html">Recursions</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data Structures
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Arrays.html">Arrays</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Strings</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Paradigms</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Procedural
+                            Programing</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Object Oriented
+                            Programing</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Conditionals and Loops</h1>
+            <p> </p>
+            <p> </p>
+            <h4>Description of conditional statements</h4>
+            <h5>if else statements</h5>
+            <p>if statement is used to check a particular condition. The result of this staement is either true or
+                false.
+                The further tasks are executed on the basis of the result of this statement.
+            </p>
+            <p>Syntax</p>
+            <p>if (condition) {// statements}</p>
+            <p>else {// statements}</p>
+            <h4>Description of Loops</h4>
+            <p>Loops are used whenever we want to repeat the statements for a number of times</p>
+            <h5>While loop</h5>
+            <p>syntax - while(condition) {// statements to be repeated}</p>
+            <h5>For Loop</h5>
+            <p>syntax - for(statemnt1; statement2(condition); statement3) {// statements to be repeated}</p>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Example row of columns -->
+        <h5>Q1 Sum of even & odd</h5>
+        <p>Write a program to input an integer N and print the sum of all its even digits and sum of all its odd digits
+            separately.
+            Digits mean numbers, not the places! That is, if the given integer is "13245", even digits are 2 & 4 and odd
+            digits are 1, 3 & 5.</p>
+        <h5>code</h5>
+        <p>#include<iostream>
+                <P>using namespace std;</P>
+
+                int main() {
+                // Write your code here
+                int num;
+                cin >> num;
+                int e_sum = 0;
+                int o_sum = 0;
+                while (num != 0) {
+                int rem = num % 10;
+                if (rem % 2 == 0) {
+                e_sum += rem;
+                }
+                else {
+                o_sum += rem;
+                }
+                num = num / 10;
+                }
+                cout << e_sum << " " << o_sum; }</p>
+                    <h5>Q2 Find power of a number</h5>
+                    <p>
+                        Write a program to find x to the power n (i.e. x^n). Take x and n from the user. You need to
+                        print the answer.
+                        Note : For this question, you can assume that 0 raised to the power of 0 is 1
+                    </p>
+                    <h5>code</h5>
+                    <p>#include<iostream>
+                            using namespace std;
+
+                            int main() {
+                            // Write your code here
+                            int x;
+                            int n;
+                            cin >> x >> n;
+                            if (x == 0 && n == 0) {
+                            cout << 1; return 0; } else if (x==0) { cout << 0; return 0; } else if (n==0) { cout << 1;
+                                return 0; } else { int pow=1; int i=1; while (i <=n) { pow=pow * x; i++; } cout << pow;
+                                return 0; } }</p>
+                                <h5>Q3 Total Salary</h5>
+                                <p>Write a program to calculate the total salary of a person. The user has to enter the
+                                    basic salary (an integer) and the grade (an uppercase character), and depending upon
+                                    which the total salary is calculated as -</p>
+                                <p> totalSalary = basic + hra + da + allow – pf</p>
+                                <p>hra = 20% of basic
+                                    da = 50% of basic
+                                    allow = 1700 if grade = ‘A’
+                                    allow = 1500 if grade = ‘B’
+                                    allow = 1300 if grade = ‘C' or any other character
+                                    pf = 11% of basic.</p>
+                                <h5>code</h5>
+                                <p>#include<iostream>
+                                        using namespace std;
+
+                                        int main() {
+                                        // Write your code here
+                                        int basic_salary;
+                                        char grade;
+                                        cin >> basic_salary >> grade;
+                                        double hra = 0.2 * basic_salary;
+                                        double da = 0.5 * basic_salary;
+                                        int allow;
+                                        if (grade == 'A') {
+                                        allow = 1700;
+                                        }
+                                        else if (grade == 'B') {
+                                        allow = 1500;
+                                        }
+                                        else {
+                                        allow = 1300;
+                                        }
+                                        double pf = (11.0/100) * basic_salary;
+                                        double salary = basic_salary + hra + da + allow - pf;
+                                        int t_sal = salary;
+                                        if (salary - t_sal >= 0.5) {
+                                        t_sal++;
+                                        }
+                                        cout << t_sal; }</p>
+                                            <h5>Q4 Star pattern 1</h5>
+                                            <p>for n = 3 print</p>
+                                            <p> *</p>
+                                            <p>***</p>
+                                            <p>*****</p>
+                                            <h5>code</h5>
+                                            <p>int main(){
+
+                                                /* Read input as specified in the question.
+                                                * Print output as specified in the question.
+                                                */
+                                                int n;
+                                                cin >> n;
+                                                int i,j,k;
+                                                i = 1;
+                                                while (i <= n) { k=1; while (k <=n - i ) { cout << " " ; k++; } j=1;
+                                                    while (j <=2*i - 1) { cout << "*" ; j++; } cout << endl; i++; } }
+                                                    </p>
+                                                    <h5>Q5 Star pattern 2</h5>
+                                                    <p>for n = 3 print</p>
+                                                    <p>1</p>
+                                                    <p>232
+                                                    </p>
+                                                    <p>34543</p>
+                                                    <h5>code</h5>
+                                                    <p>#include <iostream>
+                                                            using namespace std;
+
+                                                            int main() {
+                                                            /* Read input as specified in the question.
+                                                            * Print output as specified in the question.
+                                                            */
+                                                            int i = 1;
+                                                            int n;
+                                                            cin >> n;
+                                                            while (i <= n) { int space=n - i; while (space> 0) {
+                                                                cout << " " ; space--; } int k=i; int j=1; while (j <=i)
+                                                                    { cout << k++; j++; } j=1; k=2 * i - 2; while (j <
+                                                                    i) { cout << k--; j++; } cout << endl; i++; } }</p>
+                                                                    <h5>Q6 Diamond pattern</h5>
+                                                                    <p>for n = 3 print</p>
+                                                                    <p>*</p>
+                                                                    <p>***</p>
+                                                                    <p>*</p>
+                                                                    <h5>code</h5>
+                                                                    <p>#include<iostream>
+                                                                            using namespace std;
+
+
+                                                                            int main() {
+
+                                                                            /* Read input as specified in the question.
+                                                                            * Print output as specified in the question.
+                                                                            */
+                                                                            int n;
+                                                                            cin >> n;
+                                                                            int N = n / 2 + 1;
+                                                                            int i = 1;
+                                                                            while (i <= N) { int space=N - i; while
+                                                                                (space> 0) {
+                                                                                cout << " " ; space --; } int j=1; while
+                                                                                    (j <=i) { cout << "*" ; j++; } j=1;
+                                                                                    while (j < i) { cout << "*" ; j++; }
+                                                                                    cout << endl; i++; } N=n / 2; i=1;
+                                                                                    while (i <=N) { int space=1; while
+                                                                                    (space <=i) { cout << " " ; space++;
+                                                                                    } int j=N - i + 1; while (j>= 1) {
+                                                                                    cout << "*" ; j--; } j=N - i; while
+                                                                                        (j>= 1) {
+                                                                                        cout << "*" ; j--; } cout <<
+                                                                                            endl; i++; } }</p>
+                                                                                            <h5>Q6 fibbonaci series</h5>
+                                                                                            <p>for n = 5, print 1, 2, 3,
+                                                                                                5, 8 where fib(n) =
+                                                                                                fib(n - 1) + fib(n - 2)
+                                                                                            </p>
+                                                                                            <h5>code</h5>
+                                                                                            <p>bool checkMember(int n){
+
+                                                                                                /* Don't write main().
+                                                                                                * Don't read input, it
+                                                                                                is passed as function
+                                                                                                argument.
+                                                                                                * Return output and
+                                                                                                don't print it.
+                                                                                                * Taking input and
+                                                                                                printing output is
+                                                                                                handled automatically.
+                                                                                                */
+                                                                                                int first = 0;
+                                                                                                int second = 1;
+                                                                                                int temp;
+                                                                                                int i = 2;
+                                                                                                if (n == 0 || n == 1) {
+                                                                                                return true;
+                                                                                                }
+                                                                                                while (i <= 10000) {
+                                                                                                    temp=first;
+                                                                                                    first=second; second
+                                                                                                    +=temp; if
+                                                                                                    (second==n) { return
+                                                                                                    true; } i++; }
+                                                                                                    return false; }</p>
+                                                                                                    <h5>Q7 square root
+                                                                                                    </h5>
+                                                                                                    <p>given an integer
+                                                                                                        n find the
+                                                                                                        square root of n
+                                                                                                    </p>
+                                                                                                    <h5>code</h5>
+                                                                                                    <p>#include
+                                                                                                        <iostream>
+                                                                                                            using
+                                                                                                            namespace
+                                                                                                            std;
+
+                                                                                                            int main() {
+                                                                                                            // Write
+                                                                                                            your code
+                                                                                                            here
+                                                                                                            // edge
+                                                                                                            int num;
+                                                                                                            cin >> num;
+                                                                                                            if (num ==
+                                                                                                            0) {
+                                                                                                            cout << 0;
+                                                                                                                return
+                                                                                                                0; } int
+                                                                                                                start=0;
+                                                                                                                int
+                                                                                                                end=num;
+                                                                                                                int
+                                                                                                                root=0;
+                                                                                                                while
+                                                                                                                (start
+                                                                                                                <=end) {
+                                                                                                                int
+                                                                                                                mid=(start
+                                                                                                                + end) /
+                                                                                                                2; if
+                                                                                                                (mid*mid==num)
+                                                                                                                {
+                                                                                                                root=mid;
+                                                                                                                break; }
+                                                                                                                if(mid*mid
+                                                                                                                < num) {
+                                                                                                                start=mid
+                                                                                                                + 1;
+                                                                                                                root=mid;
+                                                                                                                } else {
+                                                                                                                end=mid
+                                                                                                                - 1; } }
+                                                                                                                cout <<
+                                                                                                                root;
+                                                                                                                return
+                                                                                                                0; }</p>
+
+
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>FindCode - Arrays</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">FindCode - Arrays</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.htm">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Problem solving techniques
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Conditionals.html">Conditional And Loops</a>
+                        <a class="dropdown-item" href="/functions.html">Functions</a>
+                        <a class="dropdown-item" href="/recursions.html">Recursions</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Data Structures
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Arrays.html">Arrays</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Strings</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Paradigms</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Procedural
+                            Programing</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Object Oriented
+                            Programing</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Arrays</h1>
+            <h3>Description</h3>
+            <p>Array is linear data structure which is used to store "N" data elements</p>
+            <p>Array in C++ is "N" contageous memory locations of similar datatype</p>
+            <p>Syntax</p>
+            <p>datatype array_name[Size of the array];</p>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Problems based on Arrays</h2>
+        <h5>Q1 Find Unique</h5>
+        <p>Task: You have been given an integer array/list(ARR) of size N. Where N is equal to [2M + 1].
+            Now, in the given array/list, 'M' numbers are present twice and one number is present only once.
+            You need to find and return that number which is unique in the array/list.</p>
+        <h5>code</h5>
+        <p>int findUnique(int *arr, int size)
+            {
+            //Write your code here
+            int i = 0;
+            while (i < size) { int j=0; while (j < size) { if (i !=j) { if (arr[i]==arr[j]) { break; } } j++; } if
+                (j==size) { return arr[i]; } i++; } }</p>
+                <h5>Q2 Find duplicate</h5>
+                <p>Task: You have been given an integer array/list(ARR) of size N. Where N is equal to [2M + 1].
+                    Now, in the given array/list, 'M' numbers are present twice and one number is present only once.
+                    You need to find and return that number which is unique in the array/list.</p>
+                <h5>code</h5>
+                <p>int findUnique(int *arr, int size)
+                    {
+                    //Write your code here
+                    int i = 0;
+                    while (i < size) { int j=0; while (j < size) { if (i !=j) { if (arr[i]==arr[j]) { break; } } j++; }
+                        if (j==size) { return arr[i]; } i++; } }</p>
+                        <h5>Q3 intersection</h5>
+                        <p>Task: You have been given two integer arrays/list(ARR1 and ARR2) of size N and M,
+                            respectively. You need to print their intersection; An intersection for this problem can be
+                            defined when both the arrays/lists contain a particular value or to put it in other words,
+                            when there is a common value that exists in both the arrays/lists.</p>
+                        <h5>code</h5>
+                        <p>#include <climits>
+                                void intersection(int *input1, int *input2, int size1, int size2)
+                                {
+                                //Write your code here
+                                int s = 0;
+                                while (s < size1) { int i=0; while (i < size2) { if (input2[i]==input1[s]) { cout <<
+                                    input1[s] << " " ; input2[i]=INT_MIN; break; } i++; } s++; } }</p>
+
+                                    <h5>Q4 Pair Sum</h5>
+                                    <p>You have been given an integer array/list(ARR) and a number X. Find and return
+                                        the total number of pairs in the array/list which sum to X.</p>
+                                    <h5>code</h5>
+                                    <p>int pairSum(int *input, int size, int x)
+                                        {
+                                        //Write your code here
+                                        int pair = 0;
+                                        int i = 0;
+                                        while (i < size) { int j=i + 1; while (j < size) { if (input[i] + input[j]==x) {
+                                            pair++; } j++; } i++; } return pair; }</p>
+                                            <h5>Q5 Sort 0 1</h5>
+                                            <p>Task: You have been given an integer array/list(ARR) of size N that
+                                                contains only integers, 0 and 1. Write a function to sort this
+                                                array/list. Think of a solution which scans the array/list only once and
+                                                don't require use of an extra array/list.</p>
+                                            <h5>code</h5>
+                                            <p>void sortZeroesAndOne(int *input, int size)
+                                                {
+                                                //Write your code here
+                                                int i = 0;
+                                                int pos = 0;
+                                                while (i < size && pos < size) { if (input[i]==0) { int temp=input[pos];
+                                                    input[pos]=input[i]; input[i]=temp; pos++; } i++; } }</p>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
